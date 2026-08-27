@@ -1,0 +1,4 @@
+@extends('layouts.app')
+@section('content')
+<section class="auth-shell"><div class="auth-copy"><p class="eyebrow">Welcome back</p><h1>Your wardrobe, <em>your way.</em></h1><p>Sign in to keep exploring considered pieces and manage your collection.</p></div><form class="form-card" method="POST" action="{{ route('login') }}"><input type="hidden" name="_token" value="{{ csrf_token() }}"><h2>Sign in</h2><label>Email<input type="email" name="email" value="{{ old('email') }}" required autofocus></label><label>Password<input type="password" name="password" required></label><label class="check"><input type="checkbox" name="remember"> Remember me</label><button class="button" type="submit">Sign in</button><p class="form-note">New here? <a href="{{ route('register') }}">Create an account</a></p></form></section>
+@endsection

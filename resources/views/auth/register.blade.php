@@ -1,0 +1,4 @@
+@extends('layouts.app')
+@section('content')
+<section class="auth-shell"><div class="auth-copy"><p class="eyebrow">New perspective</p><h1>Make room for <em>better basics.</em></h1><p>Create your StyleHub account and find pieces that work harder in your wardrobe.</p></div><form class="form-card" method="POST" action="{{ route('register') }}"><input type="hidden" name="_token" value="{{ csrf_token() }}"><h2>Create account</h2><label>Name<input type="text" name="name" value="{{ old('name') }}" required autofocus></label><label>Email<input type="email" name="email" value="{{ old('email') }}" required></label><label>Password<input type="password" name="password" required></label><label>Confirm password<input type="password" name="password_confirmation" required></label><button class="button" type="submit">Create account</button><p class="form-note">Already a member? <a href="{{ route('login') }}">Sign in</a></p></form></section>
+@endsection
